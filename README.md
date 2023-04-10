@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Sean Balayan's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built with React, TypeScript, TailwindCSS, and deployed on Render.
 
-## Available Scripts
+#####Warning! This project is still in the works. 
 
-In the project directory, you can run:
+## Project Plan and Goals
 
-### `npm start`
+-> Navigation Bar
+    - Available links: sean_balayan.io, Home, About, Portfolio, Skills, Contact
+    - Links become available on web and accessible via sandwich button on mobile
+    - links are all usable and navigate to the appropriate page
+    - hover animation on all clickable links
+    - animations when the page loads
+        - slide in
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-> Home Page
+    - Name
+    - Title
+    - Description
+    - Portfolio/Contact Me Button
+        - navigates to the portfolio tab OR the contact me tab
+    - Professional Image
+        -> hover changes to a different text => resume
+        -> clicking navigates to pdf of resume
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - Mobile
+        - name, title, and description are listed in column
+    - Web
+        - name, title, and description are listed side by side with image
+        - image resizes for web and mobile
 
-### `npm test`
+-> Light/Dark Mode
+-> Implement Lazy Loading
+-> Implement smooth scroll
+-> Working Contact Form
+-> Responsive Web Page. Usable on both Mobile and Web
+-> Deploy on Render
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Available Tabs
 
-### `npm run build`
+### Home
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### About
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Portfolio
 
-### `npm run eject`
+### Skills
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
