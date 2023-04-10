@@ -59,8 +59,8 @@ export default function Home({dark, handleDark}: HomeProps) {
                     </div>
                 </div>
                 <div className="
-                        my-2 ml-4 w-screen flex items-center justify-center
-                        md:w-full
+                        my-2 w-screen flex items-center justify-center
+                        md:w-full md:ml-4
                     ">
                     <img className={`
                             w-full hover:scale-110 hover:blur-sm duration-200 cursor-pointer
