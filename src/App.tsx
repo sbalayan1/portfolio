@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home'
 import Links from './Components/Links'
+import About from './Components/About'
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -13,9 +14,13 @@ function App() {
     setDark(dark => !dark)
   }
   return (
-    <div className={`flex flex-col justify-between items-center text-4xl min-h-screen ${dark ? "bg-blue-950 text-black" : "bg-white text-blue-800"}`}>
+    <div 
+      className={`
+        flex flex-col justify-between items-center text-4xl min-h-screen ${dark ? "bg-blue-950 text-black" : "bg-white text-blue-800"}
+      `}>
       <NavBar dark={dark} handleDark={handleDark}/>
       <Home dark={dark} handleDark={handleDark}/>
+      <About />
       <Links />
     </div>
   );

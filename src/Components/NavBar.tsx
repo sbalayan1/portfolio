@@ -33,11 +33,11 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
             }
         >
             <h2 className="
-                    cursor-pointer hover:scale-110 duration-200
-                    md:ml-2
+                    ml-4 cursor-pointer hover:scale-110 duration-200
                 "
             >
-                sean_balayan.io</h2>
+                sean_balayan.io
+            </h2>
             <div className="flex">
                 <ul className="
                         hidden items-center text-xl

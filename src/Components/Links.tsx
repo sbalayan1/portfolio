@@ -26,9 +26,8 @@ export default function Links() {
     ))
     
     return (
-        <div className='flex flex-col top-[35%] left-0 fixed'>
+        <div className='flex flex-col bot-[35%] left-0 fixed'>
             <ul className="flex">
-                {socialsToDisplay}
             </ul>
         </div>
     )   
