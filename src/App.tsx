@@ -16,11 +16,12 @@ function App() {
   return (
     <div 
       className={`
-        flex flex-col justify-between items-center text-4xl min-h-screen ${dark ? "bg-blue-950 text-black" : "bg-white text-blue-800"}
+        min-h-screen flex flex-col justify-between items-center text-4xl 
+        ${dark ? "bg-blue-950 text-black" : "bg-white text-blue-800"}
       `}>
       <NavBar dark={dark} handleDark={handleDark}/>
       <Home dark={dark} handleDark={handleDark}/>
-      <About />
+      <About dark={dark}/>
       <Links />
     </div>
   );

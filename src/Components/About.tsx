@@ -4,13 +4,14 @@ interface AboutProps {
     dark: boolean
 }
 
-export default function About() {
+export default function About({dark}: AboutProps) {
     return (
         <div
-            className="
-                h-[480px] w-full text-4xl border-t-2
+            className={`
+                h-[480px] w-screen text-4xl text-white
+                ${!dark ?" bg-blue-900": null}
                 lg:h-screen             
-            "
+            `}
         >
             <div
                 className="
@@ -22,12 +23,11 @@ export default function About() {
                         h-1/3 w-full flex justify-center items-center mt-4 text-6xl font-bold
                     "
                 >
-                    <h2>About</h2>    
+                    <h2 className="text-4xl font-normal">ABOUT</h2>    
                 </div>
                 <div
                     className="
-                        w-full flex flex-row justify-center items-center ml-4 text-3xl text-gray-600
-                        sm:text-4xl
+                        w- flex flex-row justify-center items-center ml-4 text-2xl text-gray-300
                     "
                 >
                     <p>
