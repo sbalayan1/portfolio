@@ -64,14 +64,20 @@ export default function Home({dark, handleDark}: HomeProps) {
                     className="
                         my-2 w-screen flex items-center justify-center
                         md:w-full md:ml-4
-                    ">
-                    <img 
-                        className={`
-                            w-full hover:scale-110 hover:blur-sm duration-200 cursor-pointer
-                            md:rounded-full
-                        `}
-                        src={require("../Assets/1547704960267.jpg")} alt="my profile"
-                    />
+                    "
+                    >
+                        <a
+                            className=""
+                            href="Resume_seanbalayan.pdf"
+                        >
+                            <img 
+                                className={`
+                                    w-full hover:scale-110 hover:blur-sm duration-200 cursor-pointer
+                                    md:rounded-full
+                                `}
+                                src={require("../Assets/1547704960267.jpg")} alt="my profile"
+                            />
+                        </a>
                 </div>
             </div>
         </div>
