@@ -57,7 +57,7 @@ export default function Links() {
                         >
                             <FaTimes 
                                 className="
-                                    text-gray-300 hover:text-red-500 hover:scale-125 duration-200
+                                    text-gray-400 hover:text-red-500 hover:scale-125 duration-200
                                 "
                                 size={20}
                                 onClick={() => setShowLinksBar(!showLinksBar)}

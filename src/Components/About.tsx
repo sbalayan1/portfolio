@@ -7,22 +7,28 @@ interface AboutProps {
 export default function About({dark}: AboutProps) {
     return (
         <div 
-            className="
-                w-full h-screen text-blue-800
+            className={`
+                w-full h-screen border-t-2
+                ${dark ? "text-white" : "text-blue-800"}
                 //works for mobile. Needs to be optimized for small, med, and lg screens
-            "
+            `}
         >
             <div 
                 className="
                     max-w-screen-lg p-4 mx-auto flex flex-col w-full h-full
-                    border-2
+                    md:mt-8
                 "
             >
                 <div 
-                    className="pb-8 "
+                    className="
+                        pb-8
+                    "
                 >
                     <h2
-                        className="text-4xl fontbold inline "
+                        className="
+                            text-4xl font-bold inline
+                            md:text-6xl
+                        "
                     >
                         About
                     </h2>
