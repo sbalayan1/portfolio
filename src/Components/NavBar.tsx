@@ -71,6 +71,9 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                             "
                         >
                             {link}
+                            {/* <a href="./About.tsx">
+                                {link}
+                            </a> */}
                         </li>
                     ))}
                 </ul>
