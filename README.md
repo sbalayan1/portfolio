@@ -6,7 +6,7 @@ This project was built with React, TypeScript, TailwindCSS, and deployed on Rend
 
 ## Project Plan and Goals
 
--> Navigation Bar
+- Navigation Bar
     - Available links: sean_balayan.io, Home, About, Portfolio, Skills, Contact
     - Links become available on web and accessible via sandwich button on mobile
     - links are all usable and navigate to the appropriate page
@@ -14,7 +14,7 @@ This project was built with React, TypeScript, TailwindCSS, and deployed on Rend
     - animations when the page loads
         - slide in
 
--> Home Page
+- Home Page
     - Name
     - Title
     - Description
@@ -30,12 +30,12 @@ This project was built with React, TypeScript, TailwindCSS, and deployed on Rend
         - name, title, and description are listed side by side with image
         - image resizes for web and mobile
 
--> Light/Dark Mode
--> Implement Lazy Loading
--> Implement smooth scroll
--> Working Contact Form
--> Responsive Web Page. Usable on both Mobile and Web
--> Deploy on Render
+- Light/Dark Mode
+- Implement Lazy Loading
+- Implement smooth scroll
+- Working Contact Form
+- Responsive Web Page. Usable on both Mobile and Web
+- Deploy on Render
 
 ## Available Tabs
 
