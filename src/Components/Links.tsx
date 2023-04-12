@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 // import { SiJavascript, SiTypescript, SiReact, SiRubyonrails, SiPython, SiPostgresql, SiHtml5 } from 'react-icons/si'
 import { FaGithub, FaTimes } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
@@ -12,7 +13,7 @@ export default function Links() {
     const httpLinks = ["https://www.github.com/sbalayan1/", "https://www.linkedin.com/in/sean-balayan/", "mailto:balayans2014@gmail.com", "/Resume_seanbalayan.pdf"]
     const socialLinks = [
         <FaGithub className="text-black" size={40}/> , 
-        <BsLinkedin className="bg-white" size={40}/>, 
+        <BsLinkedin className="text-blue-800" size={40}/>, 
         <HiOutlineMail className="text-gray-700" size={40}/>,
         <BsFillPersonLinesFill className="text-gray-700" size={40}/>
     ]
@@ -33,6 +34,7 @@ export default function Links() {
             >
                 {scl}  
             </a>
+
         </li>
     ))
     

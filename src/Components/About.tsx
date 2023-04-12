@@ -7,6 +7,7 @@ interface AboutProps {
 export default function About({dark}: AboutProps) {
     return (
         <div 
+            id="About"
             className={`
                 w-full h-screen border-t-2
                 ${dark ? "text-white" : "text-blue-800"}
@@ -16,12 +17,14 @@ export default function About({dark}: AboutProps) {
             <div 
                 className="
                     max-w-screen-lg p-4 mx-auto flex flex-col w-full h-full
-                    md:mt-8
+                    md:justify-center
                 "
             >
                 <div 
                     className="
                         pb-8
+                        md:mt-8
+                        
                     "
                 >
                     <h2

@@ -5,6 +5,9 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home'
 import Links from './Components/Links'
 import About from './Components/About'
+import Portfolio from './Components/Portfolio';
+import Skills from './Components/Skills';
+import Contact from './Components/Contact';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -17,11 +20,14 @@ function App() {
     <div 
       className={`
         min-h-screen flex flex-col justify-between items-center text-4xl 
-        ${dark ? "bg-blue-950 text-black" : "bg-white text-blue-800"}
+        ${dark ? "bg-blue-950 text-white" : "bg-white text-blue-800"}
       `}>
       <NavBar dark={dark} handleDark={handleDark}/>
       <Home dark={dark} handleDark={handleDark}/>
       <About dark={dark}/>
+      <Portfolio/>
+      <Skills />
+      <Contact />
       <Links />
     </div>
   );

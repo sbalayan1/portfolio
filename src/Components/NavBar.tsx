@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import {Link} from 'react-scroll'
+
+
 import {MdDarkMode, MdOutlineDarkMode} from 'react-icons/md'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
-// import {Link} from 'react-dpom'
 interface NavBarProps {
     dark: boolean
     handleDark(): void
@@ -17,12 +19,23 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
             onClick={() => {}} 
             className="px-5 cursor-pointer capitalize hover:scale-110 duration-200"
         >
-            {/* <a href='#{link}'>{link}</a> */}
-            {link}
+            <Link
+                activeClass="active"
+                to={`${link}`}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+            >
+                {link}
+            </Link>
         </li>
     ))
 
-    const displayNavBtns = () => {setBtnsOn(btnsOn => !btnsOn)}
+    const displayNavBtns = () => {
+        console.log('clicked')
+        setBtnsOn(btnsOn => !btnsOn)
+    }
 
     return (
         <div className={`
@@ -61,16 +74,26 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                         md:hidden
                     `} 
                 >
-                    {/* below display the nav button links when the screen is small */}
+                    {/* below display the nav button links when mobile*/}
                     {homeBtns.map(({id, link}) => (
                         <li
                             key={id}
-                            onClick={() => {}} 
+                            onClick={displayNavBtns} 
                             className="
                                 px-5 cursor-pointer capitalize hover:scale-110 duration-200
                             "
                         >
-                            {link}
+                            <Link
+                                activeClass="active"
+                                to={`${link}`}
+                                spy={true}
+                                smooth={true}
+                                offset={-82}
+                                duration={600}
+                                onClick={displayNavBtns}
+                            >
+                                {link}
+                            </Link>
                             {/* <a href="./About.tsx">
                                 {link}
                             </a> */}

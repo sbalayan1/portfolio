@@ -1,4 +1,5 @@
 import React from 'react'
+
 interface HomeProps {
     dark: boolean
     handleDark(): void
@@ -7,6 +8,7 @@ export default function Home({dark, handleDark}: HomeProps) {
     
     return (
         <div 
+            id="Home"
             className="
                 h-screen w-full
             "
