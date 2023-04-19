@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-scroll'
 
 interface HomeProps {
     dark: boolean
@@ -51,14 +52,25 @@ export default function Home({dark, handleDark}: HomeProps) {
                         ">
                         <button 
                             
-                                className={`
+                            className={`
                                 ${dark ? "bg-blue-950" : "bg-gradient-to-br from-blue-800 to-blue-400"}
                                 ${dark ? "text-white" : "text-white"}
                                 border-2 rounded-lg px-6 py-3
                                 hover:scale-125 hover:bg-white hover:text-blue-950 duration-200 cursor-pointer 
                             `}
+                            onClick={() => console.log('firing')}
+                            
                         >
-                            Portfolio
+                            <Link 
+                                activeClass="active"
+                                to="Portfolio"
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
+                            >
+                                Portfolio
+                            </Link>
                         </button>
                     </div>
                 </div>

@@ -19,13 +19,13 @@ function App() {
   return (
     <div 
       className={`
-        min-h-screen flex flex-col justify-between items-center text-4xl 
+        min-h-screen flex flex-col items-center text-4xl 
         ${dark ? "bg-blue-950 text-white" : "bg-white text-blue-800"}
       `}>
       <NavBar dark={dark} handleDark={handleDark}/>
       <Home dark={dark} handleDark={handleDark}/>
       <About dark={dark}/>
-      <Portfolio/>
+      <Portfolio />
       <Skills />
       <Contact />
       <Links />

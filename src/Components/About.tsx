@@ -9,48 +9,30 @@ export default function About({dark}: AboutProps) {
         <div 
             id="About"
             className={`
-                w-full h-screen border-t-2
+                w-full h-5/6 border-t-2
                 ${dark ? "text-white" : "text-blue-800"}
                 //works for mobile. Needs to be optimized for small, med, and lg screens
             `}
         >
             <div 
                 className="
-                    max-w-screen-lg p-4 mx-auto flex flex-col w-full h-full
+                    max-w-screen-lg p-4 flex flex-col w-full
                     md:justify-center
                 "
             >
-                <div 
-                    className="
-                        pb-8
-                        md:mt-8
-                        
-                    "
-                >
+                <div className="pb-4 md:mt-8">
                     <h2
-                        className="
-                            text-4xl font-bold inline
-                            md:text-6xl
-                        "
+                        className="text-4xl font-bold inline md:text-6xl"
                     >
                         About
                     </h2>
                 </div>
 
-                <p
-                    className="
-                        text-2xl
-                    "
-                >
+                <p className="text-2xl">
                     Hi there! I am a junior web developer from Honolulu, Hawaii. Currently, I am a Technical Coach at Flatiron School where I work with and teach students about JavaScript, React, Ruby, and Python as well as the frameworks and libraries they're associated with. 
                 </p>
                 <br/>
-                <p
-                    className="
-                        text-2xl
-                    "
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit rem quia et repudiandae beatae sed officiis ipsum, tempora provident rerum veritatis id. Non possimus error nisi inventore rem delectus fugit. Harum voluptates minima minus at quaerat ut veritatis perspiciatis laborum sapiente nam iusto expedita totam, similique quisquam, doloribus magni dolore.
+                <p className="text-2xl">I thrive in situations where I am consistenly challenged and learning. I am able to hustle, keep a cool head, can adapt during intense situations, and manage multiple tasks at once. With this, I would be a valuable asset who can manage tasks effectively, contribute creatively and do them well.
                 </p>
             </div>
         </div>
