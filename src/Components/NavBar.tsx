@@ -24,7 +24,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 to={`${link}`}
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={500}
             >
                 {link}
