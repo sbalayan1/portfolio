@@ -21,7 +21,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
         >
             <Link
                 activeClass="active"
-                to={`${link}`}
+                to={link}
                 spy={true}
                 smooth={true}
                 offset={-80}
@@ -45,11 +45,17 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 `
             }
         >
-            <h2 className="
-                    ml-4 cursor-pointer hover:scale-110 duration-200
-                "
-            >
+            <h2 className="ml-4 cursor-pointer hover:scale-110 duration-200">
+                <Link
+                    activeClass='active'
+                    to="Home"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                >
                 sean_balayan.io
+                </Link>
             </h2>
             <div className="flex">
                 <ul className="
@@ -85,7 +91,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                         >
                             <Link
                                 activeClass="active"
-                                to={`${link}`}
+                                to={link}
                                 spy={true}
                                 smooth={true}
                                 offset={-82}
@@ -94,9 +100,6 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                             >
                                 {link}
                             </Link>
-                            {/* <a href="./About.tsx">
-                                {link}
-                            </a> */}
                         </li>
                     ))}
                 </ul>

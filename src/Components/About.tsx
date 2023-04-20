@@ -29,7 +29,7 @@ export default function About({dark}: AboutProps) {
                     Hi there! I am a junior web developer from Honolulu, Hawaii. Currently, I am a Technical Coach at Flatiron School where I work with and teach students about JavaScript, React, Ruby, and Python as well as the frameworks and libraries they're associated with. 
                 </p>
                 <br/>
-                <p className="text-2xl">I thrive in situations where I am consistenly challenged and learning. I am able to hustle, keep a cool head, can adapt during intense situations, and manage multiple tasks at once. With this, I would be a valuable asset who can manage tasks effectively, contribute creatively and do them well.
+                <p className="text-2xl">I thrive in situations where I am consistenly challenged and learning. I am able to hustle, keep a cool head, can adapt during intense situations, and manage multiple tasks at once. With these skills, I am a valuable asset who can manage tasks effectively, contribute creatively and do them well.
                 </p>
             </div>
         </div>

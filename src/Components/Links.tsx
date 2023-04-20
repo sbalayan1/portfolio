@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
-
-// import { SiJavascript, SiTypescript, SiReact, SiRubyonrails, SiPython, SiPostgresql, SiHtml5 } from 'react-icons/si'
 import { FaGithub, FaTimes } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill, BsLinkedin } from 'react-icons/bs'
 
 export default function Links() {
-    // const skills = [<SiJavascript className="text-yellow-500 bg-black"/>, <SiTypescript className="text-blue-700 bg-black"/>, <SiReact className="bg-black text-blue-500"/>, <SiRubyonrails className='bg-red-500'/>, <SiPython className="bg-blue-500"/>, <SiPostgresql className="bg-blue-300"/>, <SiHtml5 className="bg-orange-400" /> ]
-    // const skillsToDisplay = skills.map((skill, idx) => ({id: idx+1, component: skill}))
     const [showLinksBar, setShowLinksBar] = useState(true)
 
     const httpLinks = ["https://www.github.com/sbalayan1/", "https://www.linkedin.com/in/sean-balayan/", "mailto:balayans2014@gmail.com", "/Resume_seanbalayan.pdf"]
@@ -42,13 +38,11 @@ export default function Links() {
         <>
             {showLinksBar === true ? 
                 <div 
-                    className='
-                        w-screen flex flex-col items-center bottom-0 fixed
-                    '
+                    className='w-screen flex flex-col items-center bottom-0 fixed'
                     >
                     <ul 
                         className="
-                            w-full flex justify-center bg-gray-300 rounded-sm
+                            w-full flex justify-center bg-gray-300 rounded-md
                             lg:w-1/4
                         "
                     >

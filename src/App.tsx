@@ -13,9 +13,7 @@ import Contact from './Components/Contact';
 
 function App() {
   const [dark, setDark] = useState(false)
-  const handleDark = () => {
-    setDark(dark => !dark)
-  }
+  const handleDark = () => {setDark(dark => !dark)}
   return (
     <div 
       className={`
