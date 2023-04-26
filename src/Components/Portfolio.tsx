@@ -10,7 +10,6 @@ export default function Portfolio() {
     const demoLinks = ["https://www.loom.com/share/b51cf4868a1045c291b3a8815c490f4b", "https://www.loom.com/share/d5a1338edc5e44c9af19149239ee4b51", "https://www.loom.com/share/886cfc82eba849f88ac4f1eb3693b637"]
     const desc = ["Portfolio Tracker is an options trading tracker that allows users to track and analyze their options trading as well as view their overall portfolio performance over multiple timeframes.", "Just like old Pokemon Games, PokemonBrawl is a mock Pokemon Battle Application that allows users to catch Pokemon, build and customize teams, and battle other trainers!", "NPI Provider Finder is a full stack application that lets users search the NPI registry and view its results."]
 
-
     const projectLinks = projectNames.map((proj, idx) => {
         const obj = {
             img: imageLinks[idx],

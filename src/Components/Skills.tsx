@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { SiJavascript, SiTypescript, SiReact, SiRubyonrails, SiPython, SiPostgresql, SiHtml5, SiCss3, SiFlask, SiDocker, SiLaravel } from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiReact, SiRubyonrails, SiPython, SiPostgresql, SiHtml5, SiCss3, SiFlask, SiDocker, SiLaravel, SiTailwindcss } from 'react-icons/si'
 import { FaArrowLeft, FaArrowRight, FaPause, FaPlay } from 'react-icons/fa'
 
 export default function Skills() {
@@ -10,6 +10,7 @@ export default function Skills() {
     const skills = [
         <SiJavascript className="p-2 rounded-md text-yellow-500" size={100}/>, 
         <SiReact className="p-2 rounded-md bg-black text-blue-500" size={100}/>, 
+        <SiTailwindcss className="p-2 rounded-md bg-white text-cyan-500" size={100}/>,
         <SiRubyonrails className='p-2 rounded-md bg-red-600 text-white' size={100}/>, 
         <SiPython className="p-2 rounded-md bg-blue-500 text-yellow-500" size={100}/>, 
         <SiPostgresql className="p-2 rounded-md bg-blue-300" size={100}/>, 
@@ -24,8 +25,8 @@ export default function Skills() {
         <SiDocker className="p-2 rounded-md text-blue-700" size={100}/>
     ]
 
-    const skillNames = ["JavaScript", "React", "Ruby on Rails", "Python", "PostgreSQL", "HTML", "CSS"]
-    const wipNames = ["TypeScript", "Flask", "Laravel", 'Docker']
+    const skillNames = ["JavaScript", "React", "TailwindCSS", "Ruby on Rails", "Python", "PostgreSQL", "HTML", "CSS"]
+    const wipNames = ["TypeScript", "Laravel", "Flask", 'Docker']
 
     const navLeft = useCallback((section: string): void => {
         if (section === "Skills") {
@@ -96,7 +97,7 @@ export default function Skills() {
     }, [skillsIdx, wipIdx, pause, navRight, navLeft])
 
     return (
-        <div id="Skills" className="w-full flex flex-col justify-center items-center p-4 border-t-2 md:h-screen">
+        <div id="Skills" className="w-full flex flex-col justify-center items-center p-4 border-t-2 md:h-1/2 bg-gradient-to-br from-blue-400 to-white">
             {sectionsToDisplay}
         </div>
     )

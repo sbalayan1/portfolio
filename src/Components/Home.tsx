@@ -10,9 +10,7 @@ export default function Home({dark, handleDark}: HomeProps) {
     return (
         <div 
             id="Home"
-            className="
-                h-screen w-full
-            "
+            className="h-screen w-full md:flex md:items-center"
         >
             <div 
                 className="
@@ -21,19 +19,8 @@ export default function Home({dark, handleDark}: HomeProps) {
                     lg:h-full
                 "
             >
-                <div 
-                    className="
-                        flex flex-col justify-center h-2/5
-                    "
-                    >
-                    <h2 
-                        className={`
-                            ${dark ? "text-white" : null}
-                            text-4xl font-bold
-                            sm:text-7xl
-                        `
-                        }
-                    >
+                <div className="flex flex-col justify-center h-2/5 mt-4 md:p-4">
+                    <h2 className={`${dark ? "text-white" : null} text-4xl font-bold sm:text-7xl`}>
                         Full Stack Software Engineer
                     </h2>
                     <p 
@@ -42,6 +29,9 @@ export default function Home({dark, handleDark}: HomeProps) {
                             py-4 
                             text-2xl
                             sm:text-4xl
+                            md:text-2xl
+                            lg:text-3xl
+                            xl:text-4xl
                         `}>
                             I build applications using JavaScript, React, TailwindCSS, and Ruby on Rails.
                         </p>
@@ -58,8 +48,7 @@ export default function Home({dark, handleDark}: HomeProps) {
                                 border-2 rounded-lg px-6 py-3
                                 hover:scale-125 hover:bg-white hover:text-blue-950 duration-200 cursor-pointer 
                             `}
-                            onClick={() => console.log('firing')}
-                            
+                            type="button"
                         >
                             <Link 
                                 activeClass="active"
@@ -74,20 +63,12 @@ export default function Home({dark, handleDark}: HomeProps) {
                         </button>
                     </div>
                 </div>
-                <div 
-                    className="
-                        my-2 w-screen flex items-center justify-center
-                        md:w-full md:ml-4
-                    "
-                    >
-                        <a
-                            className=""
-                            href="Resume_seanbalayan.pdf"
-                        >
+                <div className="my-2 w-screen flex items-center justify-center md:w-full md:ml-4">
+                        <a className="w-full lg:w-5/6" href="Resume_seanbalayan.pdf">
                             <img 
                                 className={`
                                     w-full hover:scale-110 hover:blur-sm duration-200 cursor-pointer
-                                    md:rounded-full
+                                    sm:rounded-full
                                 `}
                                 src={require("../Assets/1547704960267.jpg")} alt="my profile"
                             />

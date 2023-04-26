@@ -32,10 +32,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
         </li>
     ))
 
-    const displayNavBtns = () => {
-        console.log('clicked')
-        setBtnsOn(btnsOn => !btnsOn)
-    }
+    const displayNavBtns = () => {setBtnsOn(btnsOn => !btnsOn)}
 
     return (
         <div className={`
