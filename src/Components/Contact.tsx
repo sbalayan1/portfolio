@@ -83,7 +83,7 @@ export default function Contact() {
                 <form className="h-5/6 p-4" onSubmit={handleSubmit}>
                     {fields}
                     <label className="text-lg">Have more to say?</label>
-                    <textarea required name="Details" rows={4} className="w-full rounded-md h-1/4 p-2 text-lg text-black hover:scale-110 duration-200" placeholder="Details..." onChange={handleChange} value={formDetails["Details"]}></textarea>
+                    <textarea required name="Details" rows={4} className="w-full rounded-md h-1/4 p-2 text-lg text-blue-500 hover:scale-110 duration-200" placeholder="Details..." onChange={handleChange} value={formDetails["Details"]}></textarea>
                     <button disabled={emailSent === null ? false : true} className={`
                         ${emailSent === null ? "bg-blue-500" : emailSent === true ? "bg-green-500" : "bg-red-500"} 
                         text-2xl rounded-md mt-4 p-2 hover:scale-110 duration-200`} type="submit">
