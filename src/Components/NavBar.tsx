@@ -42,7 +42,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 `
             }
         >
-            <h2 className="ml-4 cursor-pointer hover:scale-110 duration-200">
+            <h2 className="cursor-pointer hover:scale-110 duration-200 md:ml-4">
                 <Link
                     activeClass='active'
                     to="Home"
@@ -55,17 +55,13 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 </Link>
             </h2>
             <div className="flex">
-                <ul className="
-                        hidden items-center text-xl
-                        md:flex
-                    "
-                >
+                <ul className="hidden items-center text-xl lg:flex">
                     {btnsToDisplay}
                 </ul>
                 <div className="mr-2 hover:scale-110 duration-200" onClick={handleDark}>
                     {dark ? <MdDarkMode /> : <MdOutlineDarkMode/>}
                 </div>
-                <div className="px-4 cursor-pointer hover:scale-110 duration-200 z-10 md:hidden" onClick={displayNavBtns}>
+                <div className="cursor-pointer hover:scale-110 duration-200 z-10 lg:hidden" onClick={displayNavBtns}>
                     {btnsOn ? <FaTimes /> : <FaBars />}
                 </div>
             </div>
@@ -74,7 +70,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                         flex flex-col justify-evenly items-center absolute top-0 left-0 w-full h-screen p
                          text-4xl
                         ${dark ? "bg-gradient-to-b from-blue-100 to-blue-950" : "bg-gradient-to-b from-blue-900 to-blue-200 "}
-                        md:hidden
+                        lg:hidden
                     `} 
                 >
                     {/* below display the nav button links when mobile*/}

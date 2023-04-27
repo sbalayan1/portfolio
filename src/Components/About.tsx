@@ -10,7 +10,7 @@ export default function About({dark}: AboutProps) {
             id="About"
             className={`
                 h-5/6 w-screen border-t-2
-                ${dark ? "text-white" : "text-blue-800"}
+                ${dark ? "text-white" : "text-blue-600"}
                 lg:h-screen lg:flex lg:justify-center lg:items-center
                 //works for mobile. Needs to be optimized for small, med, and lg screens
             `}
@@ -22,7 +22,7 @@ export default function About({dark}: AboutProps) {
                 "
             >
                 <div className="pb-4">
-                    <h2 className="text-4xl font-bold inline md:text-6xl">About</h2>
+                    <h2 className="text-4xl text-blue-800 font-bold inline md:text-6xl">About</h2>
                 </div>
 
                 <p className="text-2xl">

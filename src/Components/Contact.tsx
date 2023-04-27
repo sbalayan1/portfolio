@@ -38,14 +38,11 @@ export default function Contact() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log('firing')
         const serviceID = process.env.REACT_APP_SERVICE_ID
         const templateID = process.env.REACT_APP_TEMPLATE_ID
         
 
         if (serviceID && templateID) {
-
-      
             // new Promise((res, rej) => {
             //     const items = [res, rej]
             //     items[1]("test promise resolved or rejected")
@@ -80,7 +77,7 @@ export default function Contact() {
 
 
     return (
-        <div id="Contact" className="h-screen w-full p-4 bg-blue-950 text-white md:flex md:items-center md:justify-center">
+        <div id="Contact" className=" w-full p-4 bg-blue-950 text-white 2xl:h-screen md:flex md:items-center md:justify-center">
             <div className="max-w-lg bg-blue-800 rounded-md p-4">
                 <h2 className="md:text-5xl">Let's get in touch!</h2>
                 <form className="h-5/6 p-4" onSubmit={handleSubmit}>
