@@ -10,7 +10,7 @@ export default function About({dark}: AboutProps) {
             id="About"
             className={`
                 h-5/6 w-screen border-t-2
-                ${dark ? "text-white" : "text-blue-600"}
+                ${dark ? "text-white" : "text-gray-600"}
                 lg:h-screen lg:flex lg:justify-center lg:items-center
                 //works for mobile. Needs to be optimized for small, med, and lg screens
             `}
