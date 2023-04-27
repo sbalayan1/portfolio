@@ -44,6 +44,12 @@ export default function Contact() {
         
 
         if (serviceID && templateID) {
+
+      
+            // new Promise((res, rej) => {
+            //     const items = [res, rej]
+            //     items[1]("test promise resolved or rejected")
+            // })
             emailjs.send(serviceID, templateID, formDetails)
             .then((res) => {
                 setFormDetails({
