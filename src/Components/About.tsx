@@ -25,52 +25,31 @@ export default function About({dark}: AboutProps) {
                     <h2 className="text-4xl text-blue-800 font-bold inline md:text-6xl">About</h2>
                 </div>
 
-                <p className="text-2xl">
-                    Hi there! I am a junior web developer from Honolulu, Hawaii. Currently, I am a Technical Coach at Flatiron School where I work with and teach students about JavaScript, React, Ruby, and Python as well as the frameworks and libraries they're associated with. 
+                {/* <p className="text-2xl">
+                    As a Full Stack Developer based in Honolulu, Hawaii, I bring a passion for software engineering and a wealth of technical knowledge to the table. Currently, I serve as a Technical Coach at Flatiron School where I work with students to teach them the ins and outs of Full Stack Web Development, including JavaScript, React, Ruby, and Python, as well as their associated frameworks and libraries.
+
+                    In my role, I have successfully closed over 800 Zendesk tickets with a 100% satisfaction rating, demonstrating my ability to guide students through assignments and clarify complex concepts. I have also contributed to the development of the school's curriculum by reviewing lessons and providing solutions.
+
+                    My technical expertise has allowed me to contribute to the development of the school's curriculum and help student's become independent learners. 
+
+                    Overall, my experience as a Technical Coach has honed my ability to communicate complex technical concepts to students of all levels and backgrounds while fostering a collaborative and inclusive learning environment.
+                </p>
+                <br/> */}
+
+                <p className="text-lg lg:text-2xl">
+                        Hello there! I am a junior web developer based in Honolulu, Hawaii, and currently employed as a Technical Coach at Flatiron School. My role involves working with and teaching students about JavaScript, React, Ruby, and Python, along with the frameworks and libraries associated with them.
                 </p>
                 <br/>
-                <p className="text-2xl">I am a tech enthusiast and creative problem solver, always eager to take on new challenges. With a natural talent for logical thinking and a passion for innovation, I am a self-motivated learner who constantly strives to expand his knowledge and skills. I possess a keen eye for detail and a knack for devising elegant solutions to complex problems. Whether it's coding, cooking, or dancing, I approach every endeavor with a can-do attitude and a commitment to excellence.
+
+                <p className="text-lg lg:text-2xl">
+                    As a tech enthusiast and creative problem solver, I am always eager to take on new challenges. With a natural talent for logical thinking and a passion for innovation, I am a self-motivated learner who constantly strives to expand my knowledge and skills. My keen eye for detail and knack for devising elegant solutions to complex problems have proven to be valuable assets in my work as a developer and technical coach.
+                </p>
+                <br/>
+
+                <p className="text-lg lg:text-2xl">
+                    Whether I am coding, cooking, or dancing, I approach every endeavor with a can-do attitude and a commitment to excellence. I believe that the combination of technical expertise and a creative mindset are key to success in any field, and I am excited to continue growing and developing as a web developer.
                 </p>
             </div>
         </div>
     )
-
-
-
-    // return (
-    //     <div
-    //         className={`
-    //             h-[480px] w-screen text-4xl text-white
-    //             ${!dark ?" bg-blue-900": null}
-    //             lg:h-screen             
-    //         `}
-    //     >
-    //         <div
-    //             className="
-    //                 h-1/2 w-screen
-    //             "
-    //         >
-    //             <div
-    //                 className="
-    //                     h-1/3 w-full flex justify-center items-center mt-4 text-6xl font-bold
-    //                 "
-    //             >
-    //                 <h2 className="text-4xl font-normal">ABOUT</h2>    
-    //             </div>
-    //             <div
-    //                 className="
-    //                     flex flex-row justify-center items-center ml-4 text-2xl text-gray-300
-    //                 "
-    //             >
-    //                 <p>
-    //                     Hi there! I am a junior web developer from Honolulu, Hawaii. Currently, I am a Technical Coach at Flatiron School where I work with and teach students about JavaScript, React, Ruby, and Python as well as the frameworks and libraries they're associated with. 
-    //                 </p>
-    //                 <br/>
-    //                 {/* <p>
-    //                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti ullam placeat at sunt tempora dolor dicta, voluptatibus optio sapiente. Voluptatibus quod harum fugit iste sint voluptas quisquam tenetur voluptate. Laudantium veniam fuga illum tempora sed consectetur architecto, tempore odit repellat facere placeat velit? Officiis unde hic porro ipsum, cupiditate voluptatem?  
-    //                 </p> */}
-    //             </div>
-    //         </div>
-    //     </div>
-    // )
 }
