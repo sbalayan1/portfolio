@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MdComputer } from 'react-icons/md'
 import { FaGithub, FaVideo, FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Portfolio() {
     const [start, setStart] = useState(0)
@@ -10,6 +11,9 @@ export default function Portfolio() {
     const githubLinks = ["https://github.com/sbalayan1/portfolio_tracker", "https://github.com/sbalayan1/pokemon_brawl", "https://github.com/sbalayan1/betterrx_app_lrvl"]
     const demoLinks = ["https://www.loom.com/share/b51cf4868a1045c291b3a8815c490f4b", "https://www.loom.com/share/d5a1338edc5e44c9af19149239ee4b51", "https://www.loom.com/share/886cfc82eba849f88ac4f1eb3693b637"]
     const desc = ["Portfolio Tracker is an options trading tracker that allows users to track and analyze their options trading as well as view their overall portfolio performance over multiple timeframes.", "Just like old Pokemon Games, PokemonBrawl is a mock Pokemon Battle Application that allows users to catch Pokemon, build and customize teams, and battle other trainers!", "NPI Provider Finder is a full stack application that lets users search the NPI registry and view its results."]
+
+    
+    const isDesktop = useMediaQuery({ query: '(min-width: 1280px)'}) //used for sizing the icons for the projects. We increase the size of the icons when the device is larger than 1536px in width
 
     const projectLinks = projectNames.map((proj, idx) => {
         const obj = {
@@ -33,7 +37,7 @@ export default function Portfolio() {
                     <FaArrowRight className="hover:scale-125 duration-200 md:hidden" size={100} onClick={() => console.log('helloworld')}/>
                 </div>
                 <h3 className="text-2xl">{obj.name}</h3>
-                <div className="flex w-1/2 p-2 justify-around md:w-1/4">
+                <div className="flex w-1/2 p-2 justify-around ">
                     {obj.app !== "" ? <a className="hover:scale-110 duration-200" href={`${obj.app}`} target="_blank" rel="noreferrer"><MdComputer size={25}/></a> : null}
                     <a className="hover:scale-110 duration-200" href={obj.github} target="_blank" rel="noreferrer"><FaGithub className="text-black"size={25}/></a>
                     <a className="hover:scale-110 duration-200" href={obj.demo} target="_blank" rel="noreferrer"><FaVideo className="text-gray-500"/></a>
@@ -62,8 +66,6 @@ export default function Portfolio() {
         ]
     ]
 
-    // const projectDescriptions = 
-
     const webProjectsToDisplay = projectLinks.slice(start, start+1).map((obj, idx) => {
         return (
             <li key={idx+1} className="p-4 flex items-center">
@@ -75,12 +77,12 @@ export default function Portfolio() {
                         <a className="p-2 mx-10 shadow-black shadow-xl rounded-xl hover:scale-110 duration-200" href={obj.app !== "" ? obj.app : obj.demo} target="_blank" rel="noreferrer">
                             <img className="w-full rounded-md" src={obj.img} alt={obj.name}/>
                         </a>
-                        <div className="flex w-1/2 p-2 justify-around md:w-1/4">
-                            {obj.app !== "" ? <a className="hover:scale-110 duration-200" href={`${obj.app}`} target="_blank" rel="noreferrer"><MdComputer size={25}/></a> : null}
-                            <a className="hover:scale-110 duration-200" href={obj.github} target="_blank" rel="noreferrer"><FaGithub className="text-black"size={25}/></a>
-                            <a className="hover:scale-110 duration-200" href={obj.demo} target="_blank" rel="noreferrer"><FaVideo className="text-gray-500"/></a>
+                        <div className="flex w-1/2 p-2 justify-around xl:w-1/3">
+                            {obj.app !== "" ? <a className="hover:scale-110 duration-200" href={`${obj.app}`} target="_blank" rel="noreferrer"><MdComputer className="" size={isDesktop ? 50 : 30}/></a> : null}
+                            <a className="hover:scale-110 duration-200" href={obj.github} target="_blank" rel="noreferrer"><FaGithub className="text-black" size={isDesktop ? 50 : 30}/></a>
+                            <a className="hover:scale-110 duration-200" href={obj.demo} target="_blank" rel="noreferrer"><FaVideo className="text-gray-500" size={isDesktop ? 50 : 30} /></a>
                         </div>
-                        <p className="text-gray-500 text-xl">{obj.desc}</p>
+                        <p className="text-gray-500 text-xl xl:hidden">{obj.desc}</p>
                     </div>
                     <div className="hidden h-full w-2/5 text-xl p-10 rounded-lg bg-gray-400 text-white m-4 xl:inline">
                         {descriptions[start].map((val, idx) => {
@@ -103,19 +105,23 @@ export default function Portfolio() {
     })
 
     useEffect(() => {
-        console.log('firing')
-        setTimeout(() => {
-            setStart( start === projectLinks.length-1 ? 0 : start + 1)
-            // setStart((start) => start+1)
+        console.count("useeffect running?")
+        if (!isDesktop) {
+            console.log("not on desktop!")
+            return 
+        }
 
+        const timer = setTimeout(() => {
+            setStart(start === projectLinks.length - 1 ? 0 : start + 1)
         }, 5000)
 
-        // clearTimeout(timeout)
-    }, [start, projectLinks.length])
+        return () => clearTimeout(timer)
+
+    }, [start, isDesktop, projectLinks.length])
 
     return (
         <div id="Portfolio" className="w-full p-4 lg:mt-4 border-t-2">
-            <div id="mobile" className="w-full lg:hidden">
+            <div id="mobile" className="w-full xl:hidden">
                 <div className="max-w-screen-lg mx-auto p-4">
                     <h2 className="text-4xl font-bold md:text-6xl">Portfolio</h2>
                     <ul className="h-full w-full text-2xl flex flex-col">
@@ -123,7 +129,7 @@ export default function Portfolio() {
                     </ul>
                 </div>
             </div>
-            <div id="web" className="hidden lg:block lg:w-full">
+            <div id="web" className="hidden xl:block xl:w-full">
                 <h2 className="font-bold text-6xl">Portfolio</h2>
                 <ul className="text-xl p-4">
                     {webProjectsToDisplay}
