@@ -32,9 +32,9 @@ export default function Portfolio() {
         return (
             <li key={idx+1} className="h-5/6 mt-4 p-2 md:mt-8 md:mb-12">
                 <div className="h-2/5 w-full mb-10 flex items-center">
-                    <FaArrowLeft  className="hover:scale-125 duration-200 md:hidden" size={100} onClick={() => console.log('helloworld')}/>
+                    {/* <FaArrowLeft  className="hover:scale-125 duration-200 md:hidden" size={100} onClick={() => console.log('helloworld')}/> */}
                     <a className="p-2 mx-10 border-4 shadow-black shadow-xl rounded-xl hover:scale-110 duration-200" href={obj.app !== "" ? obj.app : obj.demo} target="_blank" rel="noreferrer"><img className="h-full w-full rounded-md" src={obj.img} alt={obj.name}/></a>
-                    <FaArrowRight className="hover:scale-125 duration-200 md:hidden" size={100} onClick={() => console.log('helloworld')}/>
+                    {/* <FaArrowRight className="hover:scale-125 duration-200 md:hidden" size={100} onClick={() => console.log('helloworld')}/> */}
                 </div>
                 <h3 className="text-2xl">{obj.name}</h3>
                 <div className="flex w-1/2 p-2 justify-around ">
@@ -105,9 +105,7 @@ export default function Portfolio() {
     })
 
     useEffect(() => {
-        console.count("useeffect running?")
         if (!isDesktop) {
-            console.log("not on desktop!")
             return 
         }
 
