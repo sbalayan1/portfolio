@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-scroll'
+import Links from './Links'
 
 interface HomeProps {
     dark: boolean
@@ -8,42 +9,18 @@ interface HomeProps {
 export default function Home({dark, handleDark}: HomeProps) {
     
     return (
-        // h-screen
-        <div id="Home"className="w-full flex flex-col justify-center mt-16 md:h-screen md:mt-0 md:flex md:items-center">
-            <div className="max-w-screen-lg flex flex-col items-center justify-center px-4
-                    md:flex-row md:h-1/2
-                    lg:h-full
-                "
-            >
-                <div className="flex flex-col justify-center h-full mt-8 md:p-4">
-                    <h2 className={`${dark ? "text-white" : null} text-4xl font-bold sm:text-7xl`}>
+        <div id="Home"className="max-w-screen-sm h-screen flex justify-center items-center">
+            <div className="max-w-screen-lg flex items-center justify-center px-4 md:flex-row md:h-1/2 lg:h-full">
+                <div className="flex flex-col justify-center h-full mt-8">
+                    <h2 className='text-sm font-bold md:text-base lg:text-2xl'>
                         Full Stack Software Engineer
                     </h2>
-                    <p 
-                        className={`
-                            ${dark ? "text-gray-400" : "text-gray-600"} 
-                            py-4 
-                            text-xl
-                            sm:text-4xl
-                            md:text-2xl
-                            lg:text-3xl
-                            xl:text-4xl
-                        `}>
-                            I build applications using JavaScript, React, TailwindCSS, and Ruby on Rails.
+                    <p className='py-4 text-[8px] md:text-xs mr-2'>
+                            I build applications using TypeScript, React, NextJS, TailwindCSS, Ruby on Rails, and Python.
                         </p>
-                    <div 
-                        className="
-                            my-2 text-2xl
-                            md:text-4xl
-                        ">
+                    <div className="my-2 text-xs md:text-base">
                         <button 
-                            
-                            className={`
-                                ${dark ? "bg-blue-950" : "bg-gradient-to-br from-blue-800 to-blue-400"}
-                                ${dark ? "text-white" : "text-white"}
-                                border-2 rounded-lg px-6 py-2 md:py-3
-                                hover:scale-125 hover:bg-white hover:text-blue-950 duration-200 cursor-pointer 
-                            `}
+                            className={`border-2 rounded-lg p-2 hover:scale-110 hover:bg-white hover:text-gunmetal duration-200 cursor-pointer`}
                             type="button"
                         >
                             <Link 
@@ -59,16 +36,19 @@ export default function Home({dark, handleDark}: HomeProps) {
                         </button>
                     </div>
                 </div>
-                <div className="h-1/4 w-screen flex items-center justify-center my-2 md:w-full md:ml-4">
-                        <a className="w-full lg:w-5/6" href="Resume_seanbalayan.pdf">
+
+
+                <div className="flex flex-col items-center max-w-screen-sm">
+                        <a className='' href="Resume_seanbalayan.pdf">
                             <img 
-                                className={`
-                                    w-full hover:scale-110 hover:blur-sm duration-200 cursor-pointer
-                                    sm:rounded-full
-                                `}
+                                className='hover:scale-110 hover:blur-sm duration-200 cursor-pointer rounded-full
+                                w-32
+                                lg:w-44 
+                                '
                                 src={require("../Assets/1547704960267.jpg")} alt="my profile"
                             />
                         </a>
+                        {/* <Links /> */}
                 </div>
             </div>
         </div>

@@ -16,8 +16,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
     const btnsToDisplay = homeBtns.map(({id, link}) => (
         <li 
             key={id}
-            onClick={() => {}} 
-            className="px-5 cursor-pointer capitalize hover:scale-110 duration-200"
+            className="px-5 text-sm cursor-pointer capitalize hover:scale-110 duration-200"
         >
             <Link
                 activeClass="active"
@@ -35,14 +34,9 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
     const displayNavBtns = () => {setBtnsOn(btnsOn => !btnsOn)}
 
     return (
-        <div className={`
-                flex justify-between items-center w-full h-20 fixed px-4 text-2xl mb-10 ${dark ? "bg-white text-blue-950" : "bg-blue-900 text-white"}
-                sm:text-md
-                md:text-4xl
-                `
-            }
-        >
-            <h2 className="cursor-pointer hover:scale-110 duration-200 md:ml-4">
+        <div className='flex justify-between items-center w-full h-20 fixed p-4 mb-1 text-sm md:text-2xl bg-oxfordBlue border-b'>
+            <h2 className="cursor-pointer hover:scale-110 duration-200
+            text-sm md:text-2xl md:ml-4">
                 <Link
                     activeClass='active'
                     to="Home"
@@ -55,7 +49,7 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 </Link>
             </h2>
             <div className="flex">
-                <ul className="hidden items-center text-xl lg:flex">
+                <ul className="hidden items-center lg:flex">
                     {btnsToDisplay}
                 </ul>
                 <div className="mr-2 hover:scale-110 duration-200" onClick={handleDark}>
@@ -66,21 +60,10 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 </div>
             </div>
             {btnsOn &&
-                <ul className={`
-                        flex flex-col justify-evenly items-center absolute top-0 left-0 w-full h-screen p
-                         text-4xl
-                        ${dark ? "bg-gradient-to-b from-blue-100 to-blue-950" : "bg-gradient-to-b from-blue-900 to-blue-200 "}
-                        lg:hidden
-                    `} 
-                >
+                <ul className='flex flex-col justify-evenly items-center absolute top-0 left-0 w-full h-screen text-sm bg-oxfordBlue lg:hidden'>
                     {/* below display the nav button links when mobile*/}
                     {homeBtns.map(({id, link}) => (
-                        <li
-                            key={id}
-                            onClick={displayNavBtns} 
-                            className="
-                                px-5 cursor-pointer capitalize hover:scale-110 duration-200
-                            "
+                        <li key={id} onClick={displayNavBtns}   className="px-5 cursor-pointer capitalize hover:scale-110 duration-200"
                         >
                             <Link
                                 activeClass="active"
