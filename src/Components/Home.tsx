@@ -10,12 +10,12 @@ export default function Home({dark, handleDark}: HomeProps) {
     
     return (
         <div id="Home"className="max-w-screen-sm h-screen flex justify-center items-center">
-            <div className="max-w-screen-lg flex items-center justify-center px-4 md:flex-row md:h-1/2 lg:h-full">
+            <div className="w-full max-w-screen-lg flex items-center justify-center px-4 md:flex-row md:h-1/2 lg:h-full">
                 <div className="flex flex-col justify-center h-full mt-8 w-3/4">
                     <h2 className='text-base font-bold md:text-lg lg:text-2xl'>
                         Full Stack Software Engineer
                     </h2>
-                    <p className='py-4 text-[9px] md:text-sm mr-2'>
+                    <p className='w-5/6 md:w-full py-4 text-[11px] md:text-sm mr-2'>
                             I build applications using TypeScript, React, NextJS, TailwindCSS, Ruby on Rails, and Python.
                     </p>
                     <div className="my-2 text-xs md:text-sm">
