@@ -11,14 +11,14 @@ export default function Home({dark, handleDark}: HomeProps) {
     return (
         <div id="Home"className="max-w-screen-sm h-screen flex justify-center items-center">
             <div className="max-w-screen-lg flex items-center justify-center px-4 md:flex-row md:h-1/2 lg:h-full">
-                <div className="flex flex-col justify-center h-full mt-8">
-                    <h2 className='text-lg font-bold lg:text-2xl'>
+                <div className="flex flex-col justify-center h-full mt-8 w-3/4">
+                    <h2 className='text-base font-bold md:text-lg lg:text-2xl'>
                         Full Stack Software Engineer
                     </h2>
-                    <p className='py-4 text-base mr-2'>
+                    <p className='py-4 text-[9px] md:text-sm mr-2'>
                             I build applications using TypeScript, React, NextJS, TailwindCSS, Ruby on Rails, and Python.
-                        </p>
-                    <div className="my-2 text-lg">
+                    </p>
+                    <div className="my-2 text-xs md:text-sm">
                         <button 
                             className={`border-2 rounded-lg p-2 hover:scale-110 hover:bg-white hover:text-gunmetal duration-200 cursor-pointer`}
                             type="button"
@@ -39,7 +39,7 @@ export default function Home({dark, handleDark}: HomeProps) {
 
 
                 <div className="flex flex-col items-center max-w-screen-sm">
-                        <a className='' href="Resume_seanbalayan.pdf">
+                        <a className='animate-pulse' href="Resume_seanbalayan.pdf">
                             <img 
                                 className='hover:scale-110 hover:blur-sm duration-200 cursor-pointer rounded-full
                                 w-32
