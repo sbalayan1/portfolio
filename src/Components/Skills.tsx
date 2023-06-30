@@ -97,7 +97,7 @@ export default function Skills() {
     }, [skillsIdx, wipIdx, pause, navRight, navLeft])
 
     return (
-        <div id="Skills" className="w-full flex flex-col justify-center items-center p-4 border-t-2 md:h-1/2 bg-gradient-to-br from-blue-400 to-white">
+        <div id="Skills" className="w-full flex flex-col justify-center items-center p-4 border-t-2 md:h-1/2">
             {sectionsToDisplay}
         </div>
     )
