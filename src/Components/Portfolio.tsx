@@ -1,6 +1,9 @@
 import React from 'react'
 import { MdComputer } from 'react-icons/md'
-import { FaGithub, FaVideo } from 'react-icons/fa'
+import { FaGithub, FaVideo, FaNodeJs } from 'react-icons/fa'
+import { TbBrandNextjs } from 'react-icons/tb'
+import {SiJavascript, SiTypescript, SiReact, SiRubyonrails, SiPython, SiPostgresql, SiHtml5, SiCss3, SiFlask, SiDocker, SiLaravel, SiTailwindcss, SiPhp, SiMaterialdesign, SiRuby, SiRender, SiHeroku } from 'react-icons/si'
+
 import { useMediaQuery } from 'react-responsive'
 
 export default function Portfolio() {
@@ -45,6 +48,14 @@ export default function Portfolio() {
         "Just like old Pokemon Games, PokemonBrawl is a mock Pokemon Battle Application that allows users to catch Pokemon, build and customize teams, and battle other trainers!", 
         "NPI Provider Finder is a full stack application that lets users search the NPI registry and view its results."
     ]
+
+    const technologies = [
+        [<SiJavascript />, <FaNodeJs />, <SiRender />],
+        [<TbBrandNextjs />, <SiJavascript/>, <SiTypescript/>, <SiReact/>, <SiTailwindcss />],
+        [<SiJavascript />, <SiReact />, <SiRuby />, <SiRubyonrails />, <SiPostgresql />, <SiMaterialdesign />, <SiRender />],
+        [<SiJavascript/>, <SiReact />, <SiRuby />, <SiRubyonrails />, <SiPostgresql />, <SiMaterialdesign />, <SiHeroku />],
+        [<SiLaravel />, <SiPhp />, <SiTailwindcss />]
+    ]
     
     const projectLinks = projectNames.map((proj, idx) => {
         const obj = {
@@ -53,7 +64,8 @@ export default function Portfolio() {
             app: appLinks[idx],
             github: githubLinks[idx],
             demo: demoLinks[idx],
-            desc: desc[idx]
+            desc: desc[idx],
+            technologies: technologies[idx]
         }
 
         return obj
@@ -62,18 +74,23 @@ export default function Portfolio() {
     const projectsToDisplay = projectLinks.map((obj, idx) => {
         return (
             <li key={idx+1} className="h-5/6 mt-4 p-2 md:mt-8 md:mb-12">
-                <div className="h-2/5 w-full mb-10 flex items-center">
-                    <a className="p-2 mx-10 hover:scale-110 duration-200" href={obj.app !== "" ? obj.app : obj.demo} target="_blank" rel="noreferrer">
-                        <img className="h-5/6 w-5/6" src={obj.img} alt={obj.name}/>
+                <div className="h-3/5 w-full flex justify-center items-center mb-1">
+                    <a className="h-full p-4 hover:scale-110 duration-200 flex justify-center" href={obj.app !== "" ? obj.app : obj.demo} target="_blank" rel="noreferrer">
+                        <img className="" src={obj.img} alt={obj.name}/>
                     </a>
                 </div>
-                <h3 className="text-lg">{obj.name}</h3>
+                <h3 className="text-base">{obj.name}</h3>
                 <div className="flex w-1/2 p-2 justify-around ">
                     {obj.app !== "" ? <a className="hover:scale-110 duration-200" href={`${obj.app}`} target="_blank" rel="noreferrer"><MdComputer size={25}/></a> : null}
                     <a className="hover:scale-110 duration-200" href={obj.github} target="_blank" rel="noreferrer"><FaGithub className="text-black"size={25}/></a>
                     <a className="hover:scale-110 duration-200" href={obj.demo} target="_blank" rel="noreferrer"><FaVideo className="text-gray-500"/></a>
                 </div>
-                <p className="text-gray-500">{obj.desc}</p>
+                <p className="text-gray-500 mb-3">{obj.desc}</p>
+                <ul className="w-4/5 flex justify-evenly text-lg">
+                    {obj.technologies.map((t,idx) => (
+                        <li key={idx} className="animate-pulse">{t}</li>
+                    ))}
+                </ul>
             </li>
         )
     })

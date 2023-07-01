@@ -69,7 +69,7 @@ export default function Contact() {
     return (
         <div id="Contact" className="w-screen p-4 flex justify-center text-xs text-gunmetal border-t">
             <div className="max-w-screen-sm max-h-screen-md w-3/4 md:w-2/5 rounded-lg p-4">
-                <h2 className="text-white">Let's get in touch!</h2>
+                <h2 className="text-white text-lg">Let's get in touch!</h2>
                 <form className="p-4" onSubmit={handleSubmit}>
                     {fields}
                     <label className="text-white ">Have more to say?</label>
