@@ -96,7 +96,7 @@ export default function Portfolio() {
                 <p className="text-gray-500 mb-3">{obj.desc}</p>
                 <ul className="w-4/5 flex justify-evenly text-lg ">
                     {obj.technologies.map((t,idx) => (
-                        <li key={idx} className="animate-pulse">{t}</li>
+                        <li key={idx} className="">{t}</li>
                     ))}
                 </ul>
             </li>

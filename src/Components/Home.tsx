@@ -39,12 +39,9 @@ export default function Home({dark, handleDark}: HomeProps) {
 
 
                 <div className="flex flex-col items-center max-w-screen-sm">
-                        <a className='animate-pulse' href="Resume_seanbalayan.pdf">
+                        <a className='' href="Resume_seanbalayan.pdf">
                             <img 
-                                className='hover:scale-110 hover:blur-sm duration-200 cursor-pointer rounded-full
-                                w-32
-                                lg:w-44 
-                                '
+                                className='hover:scale-110 hover:blur-sm duration-200 cursor-pointer rounded-full w-32 lg:w-44'
                                 src={require("../Assets/1547704960267.jpg")} alt="my profile"
                             />
                         </a>
