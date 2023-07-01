@@ -52,9 +52,9 @@ export default function NavBar({dark, handleDark}: NavBarProps) {
                 <ul className="hidden items-center lg:flex">
                     {btnsToDisplay}
                 </ul>
-                <div className="mr-2 hover:scale-110 duration-200" onClick={handleDark}>
+                {/* <div className="mr-2 hover:scale-110 duration-200" onClick={handleDark}>
                     {dark ? <MdDarkMode /> : <MdOutlineDarkMode/>}
-                </div>
+                </div> */}
                 <div className="cursor-pointer hover:scale-110 duration-200 z-10 lg:hidden" onClick={displayNavBtns}>
                     {btnsOn ? <FaTimes /> : <FaBars />}
                 </div>

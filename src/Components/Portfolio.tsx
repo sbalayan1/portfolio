@@ -81,12 +81,20 @@ export default function Portfolio() {
                 </div>
                 <h3 className="text-base">{obj.name}</h3>
                 <div className="flex w-1/2 p-2 justify-around ">
-                    {obj.app !== "" ? <a className="hover:scale-110 duration-200" href={`${obj.app}`} target="_blank" rel="noreferrer"><MdComputer size={25}/></a> : null}
-                    <a className="hover:scale-110 duration-200" href={obj.github} target="_blank" rel="noreferrer"><FaGithub className="text-black"size={25}/></a>
-                    <a className="hover:scale-110 duration-200" href={obj.demo} target="_blank" rel="noreferrer"><FaVideo className="text-gray-500"/></a>
+                    {obj.app !== "" ? 
+                        <a className="hover:scale-110 duration-200 text-lg" href={`${obj.app}`} target="_blank" rel="noreferrer">
+                            <MdComputer />
+                        </a> 
+                    : null}
+                    <a className="hover:scale-110 duration-200 text-lg" href={obj.github} target="_blank" rel="noreferrer">
+                        <FaGithub className="text-black" />
+                        </a>
+                    <a className="hover:scale-110 duration-200 text-lg" href={obj.demo} target="_blank" rel="noreferrer">
+                        <FaVideo />
+                    </a>
                 </div>
                 <p className="text-gray-500 mb-3">{obj.desc}</p>
-                <ul className="w-4/5 flex justify-evenly text-lg">
+                <ul className="w-4/5 flex justify-evenly text-lg ">
                     {obj.technologies.map((t,idx) => (
                         <li key={idx} className="animate-pulse">{t}</li>
                     ))}
