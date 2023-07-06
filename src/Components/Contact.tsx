@@ -12,7 +12,7 @@ export default function Contact() {
         "Last Name": "",
         "Email": "",
         "Phone Number": "",
-        "Details": ""
+				"Details": ""
     })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -26,7 +26,11 @@ export default function Contact() {
         return (
             <div key={label} className="pb-4 text-white">
                 <label className="mb-2">{`${label}*`}</label>
-                <input required name={label} type="text" value={formDetails[label]} className="w-full rounded-md p-2 text-oxfordBlue" placeholder={`${label}...`} onChange={handleChange}/>
+                {label === "Details" ? 
+									<textarea required name={label} rows={4} className="w-full rounded-md h-1/5 p-2  text-oxfordBlue" placeholder="Details..." onChange={handleChange} value={formDetails["Details"]}></textarea>
+								:
+									<input required name={label} type="text" value={formDetails[label]} className="w-full rounded-md p-2 text-oxfordBlue" placeholder={`${label}...`} onChange={handleChange}/>
+								}
             </div >
         )
     })
@@ -45,7 +49,7 @@ export default function Contact() {
                     "Last Name": "",
                     "Email": "",
                     "Phone Number": "",
-                    "Details": ""
+										"Details": ""
                 })
 
                 setEmailSent(true)
@@ -72,8 +76,6 @@ export default function Contact() {
                 <h2 className="text-white text-lg">Let's get in touch!</h2>
                 <form className="p-4" onSubmit={handleSubmit}>
                     {fields}
-                    <label className="text-white ">Have more to say?</label>
-                    <textarea required name="Details" rows={4} className="w-full rounded-md h-1/5 p-2 " placeholder="Details..." onChange={handleChange} value={formDetails["Details"]}></textarea>
                     <button disabled={emailSent === null ? false : true} className={`
                         ${emailSent === null ? "border" : emailSent === true ? "bg-green-500" : "bg-red-500"} 
                         rounded-md mt-4 p-2 hover:scale-110 duration-200 text-white`} type="submit">
