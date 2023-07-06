@@ -87,7 +87,7 @@ export default function Portfolio() {
                         </a> 
                     : null}
                     <a className="hover:scale-110 duration-200 text-lg" href={obj.github} target="_blank" rel="noreferrer">
-                        <FaGithub className="text-black" />
+                        <FaGithub className="" />
                         </a>
                     <a className="hover:scale-110 duration-200 text-lg" href={obj.demo} target="_blank" rel="noreferrer">
                         <FaVideo />
